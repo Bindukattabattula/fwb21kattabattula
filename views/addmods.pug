@@ -2,8 +2,8 @@ extends layout
 
 block content
   h1= title
-  p `rows #{query.rows}`
-  p `cols #{query.cols}`
+  p `Rows are #{query.rows}`
+  p `Cols are #{query.cols}`
   - var rows=Number(query.rows)
   - var cols=Number(query.cols)
   if !(Number.isInteger(rows)) || !(Number.isInteger(cols))
