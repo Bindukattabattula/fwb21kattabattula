@@ -1,0 +1,12 @@
+extends layout
+
+block content
+  h1= title
+  - var results = [{"color":"Orange", "place":"Bengal","weight":600},{"color":"Black","place":"india","weight":406},{"color":"white","place":"Uk","weight":500}]
+       div(class="container-fluid")
+         div(class="row")
+            each res,index in results
+              div(class="col-sm-2" onClick=`buy(${index})`)
+                p #{res.color}
+                p #{res.place}
+                p #{res.weight}
