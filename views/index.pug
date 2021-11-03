@@ -2,4 +2,18 @@ extends layout
 
 block content
   h1= title
-  p Welcome to #{title}
+  p Welcome to my world Be happy always#{title}
+  button(type="button", class="btn btn-secondary", onclick="update()") presMe
+  br
+  br
+  div(id="target") Display
+
+
+
+      script. 
+         var client_count = 0;
+            function  update() {
+             client_count++;
+               
+             document.getElementById("target").innerHTML ="Value now "+client_count;
+            }
