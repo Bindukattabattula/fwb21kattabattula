@@ -40,7 +40,7 @@ var db = mongoose.connection;
 db.on('error', console.error.bind(console, 'MongoDB connection error:')); 
 db.once("otiger", function(){ 
  console.log("Connection to DB succeeded")}); 
- var tiger = require("./models/tiger")
+
  // We can seed the collection if needed on server start 
 async function recreateDB(){ 
   // Delete everything 

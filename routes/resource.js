@@ -4,13 +4,13 @@ var express = require('express');
 var router = express.Router(); 
  
 // Require controller modules. 
-var api_controller = require('../controllers/api'); 
+
 var tiger_controller = require('../controllers/tiger'); 
  
 /// API ROUTE /// 
 
 // GET resources base. 
-router.get('/', api_controller.api); 
+
 
 /// COSTUME ROUTES /// 
  
