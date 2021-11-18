@@ -2,20 +2,19 @@ extends layout
 
 block content
   h1= title
-  - var results = [{"color":"Orange", "place":"Bengal","weight":600},{"color":"Black","place":"india","weight":406},{"color":"white","place":"Uk","weight":500}]
-       div(class="container-fluid")
-         div(class="row")
-            each res,index in results
-              div(class="col-sm-2" onClick=`buy(${index})`)
-                p #{res.color}
-                p #{res.place}
-                p #{res.weight}
+  //- - let items = ['gas_type','quantity','cost']
+  - let items = results;
+  - let o;
+  script.
+    function buy(x){
+      alert('purchased item ' + x)
+   } 
+  div(class='container-fluid')
+    div(class='row')
+    div(class="row row-cols-1 row-cols-sm-4 g-6")
+      each o, index in items
+        div(class="card text-dark bg-warning mb-3" class='col' class='card' class='card-body' class='card-text' onclick='buy('+index+')') #{o}
+        
+        
 
-
-
-                script.
-                     function  buy(index){
-
-                        alert(`You purchased item ${index+1}.`)
-
-                     }
+  
